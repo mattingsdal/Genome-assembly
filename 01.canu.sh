@@ -1,3 +1,5 @@
+# example x20 yeast data
+
 /usit/abel/u1/mortema/software/canu/Linux-amd64/bin/canu \
  -p asm -d yeast \
  genomeSize=12.1m \
