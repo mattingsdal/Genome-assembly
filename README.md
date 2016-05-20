@@ -2,7 +2,9 @@
 canu code.
 We are assembleling a genome with fair coverage ~x30, and need 
 
-# refine the genome using pilon
+# Refine the genome using pilon
+Here we will take advantage of the aligned and indexed short read data using --frags *bams  and aligned (indexed long reads using --jumps *bams. 
+pilon --genome genome.fasta [--frags frags.bam] [--jumps jumps.bam] [--unpaired unpaired.bam]
 
 # Aligning .fastq reads to genome
 bwa-mem code
