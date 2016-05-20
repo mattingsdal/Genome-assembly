@@ -1,29 +1,21 @@
 # Flow
-  1. Assemble long reads using canu to generate gneome fasta file
+  1. Assemble long reads using canu to generate genome fasta file
   2. Align short and long data using bwa
-  3. Refine the genome using pilon
-  4. Re-align short and long data using bwa to final genome
-  5. Run Freebayes and Platypus to call variations
-  6. QC the variants
+  3. Refine the genome fasta using pilon
+  4. Re-align short and long data using bwa to final genome fasta file
 
 
 # Assembling the genome
 canu code.
-We are assembleling a genome with fair coverage ~x30, and need 
+
+# Aligning short and long read data with bwa
+bwa code
 
 # Refine the genome using pilon
-Here we will take advantage of the aligned and indexed short read data using --frags *bams  and aligned (indexed long reads using --jumps *bams. 
-pilon --genome genome.fasta [--frags frags.bam] [--jumps jumps.bam] [--unpaired unpaired.bam]
+  Here we will take advantage of the aligned and indexed short read data using --frags *bams  and aligned (indexed long reads using --jumps *bams. 
+  pilon --genome genome.fasta [--frags frags.bam] [--jumps jumps.bam] [--unpaired unpaired.bam]
 
-# Aligning .fastq reads to genome
-bwa-mem code
+#Re-align short and long data using bwa
+bwa code
 
-# SNPs and Indel detection
-Freebayes & Platypus code
-
-# QC of SNPs
-vcftools
-
-# Population structure
-fastSTRUCTURE and PLINK code
 
