@@ -1,7 +1,7 @@
 # Flow
   1. Assemble long reads using canu to generate genome fasta file
   2. Align short and long data using bwa
-  3. Refine the genome fasta using pilon
+  3. Refine the genome fasta using pilon with bam files
   4. Re-align short and long data using bwa to final genome fasta file
 
 
