@@ -1,3 +1,12 @@
+# Flow
+  1. Assemble long reads using canu to generate gneome fasta file
+  2. Align short and long data using bwa
+  3. Refine the genome using pilon
+  4. Re-align short and long data using bwa to final genome
+  5. Run Freebayes and Platypus to call variations
+  6. QC the variants
+
+
 # Assembling the genome
 canu code.
 We are assembleling a genome with fair coverage ~x30, and need 
