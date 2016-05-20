@@ -1,5 +1,8 @@
 # Assembling the genome
-canu code
+canu code.
+We are assembleling a genome with fair coverage ~x30, and need 
+
+# refine the genome using pilon
 
 # Aligning .fastq reads to genome
 bwa-mem code
