@@ -10,9 +10,9 @@ canu code.
 
 # Aligning short and long read data with speedseq and bwa
 
-f'or D in *R1*gz
+  for D in *R1*gz
 
-do
+  do
 
   filename=$(echo $D | cut -f 1 -d .)
   name=$(echo $D | cut -f 1 -d _)
@@ -20,9 +20,9 @@ do
   lane=$(echo $D  | cut -f 3 -d _)
   rgid=$(echo $D | cut -f 1 -d .)
 
- speedseq align -R "@RG\tID:${name}\tSM:${name}\tLB:HiSeq" ~/genome/symphodus_melops.fasta ~/nobackup/fastq/${name}_${id}_${lane}_R1_001.fastq.gz ~/nobackup/fastq/${name}_${id}_${lane}_R1_002.fastq.gz  -t 4
+   speedseq align -R "@RG\tID:${name}\tSM:${name}\tLB:HiSeq" ~/genome/symphodus_melops.fasta ~/nobackup/fastq/${name}_${id}_${lane}_R1_001.fastq.gz ~/nobackup/fastq/${name}_${id}_${lane}_R1_002.fastq.gz  -t 4
 
- done'
+   done
 
 
 
