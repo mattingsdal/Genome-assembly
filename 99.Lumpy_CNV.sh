@@ -5,9 +5,9 @@ module load samtools
         do
         # Extract the discordant paired-end alignments.
         samtools view -b -F 1294 $D > $D.discordants.unsorted.bam
-        # Extract the split-read alignments
+        # Extract the split-read alignments. make sure to specify path of extractsplitreads
         samtools view -h $D \
-        | scripts/extractSplitReads_BwaMem -i stdin \
+        | /usr/local/share/bcbio/anaconda/share/lumpy-sv-0.2.12-1/scripts/extractSplitReads_BwaMem -i stdin \
         | samtools view -Sb - \
         > $D.splitters.unsorted.bam
         # Sort both alignments
