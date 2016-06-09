@@ -10,9 +10,9 @@ canu code.
 
 # Aligning short and long read data with speedseq and bwa
 
-  for D in *R1*gz
+    for D in *R1*gz
 
-  do
+    do
 
       filename=$(echo $D | cut -f 1 -d .)
       name=$(echo $D | cut -f 1 -d _)
