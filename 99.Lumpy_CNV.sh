@@ -1,5 +1,4 @@
-
-for D in *bam
+for D in [AEN]*dedup.bam
 
         do
  
@@ -19,10 +18,11 @@ for D in *bam
                 rm $D.discordants.unsorted.bam
                 rm $D.splitters.unsorted.bam
 
-                lumpyexpress
+                lumpyexpress \
                 -B $D \
                 -S $D.splitters.sorted.bam \
                 -D $D.discordants.sorted.bam \
-                -o $D_LUMPY.vcf
+                -o ${D}_LUMPY.vcf
 done
+
 
