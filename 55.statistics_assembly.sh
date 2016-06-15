@@ -6,6 +6,6 @@ fastafile=symphodus_melops.fasta
 RepeatMasker -species=teleostei $fastafile -q -pa 4
 
 #contig length, gc content etc
-infoseq -auto -only -accession -length -pgc $fastafile
+python ~/software/quast-4.0/quast.py $fastafile -o quast_out -t 4
 
 
