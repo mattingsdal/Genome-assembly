@@ -8,7 +8,6 @@ fastafile=symphodus_melops.fasta
 #contig length, gc content etc
 python ~/software/quast-4.0/quast.py $fastafile -o quast_out -t 4
 
-# CpG islands
-cpgplot symphodus_melops.fasta -window 100 -minlen 200 -minoe 0.6 -minpc 50 -outfile $fastafile.gc -graph pdf -outfeat $fastafile.gc.gff
-
+# CpG islands (parameters are from TJ alogithmn from PUBMEDID:18483567)
+cpgplot symphodus_melops.fasta -window 200 -minlen 500 -minoe 0.65 -minpc 55 -outfile $fastafile.gc -outfeat $fastafile.gc.gff -noplot
 
