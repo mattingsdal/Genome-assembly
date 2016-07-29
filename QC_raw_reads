@@ -1,5 +1,25 @@
-# use trimmomatic to filter raw data using SLIDINGWINDOW:25, LEADING:20, TRAILING:20, MINLENGTH:100
-java -classpath trimmomatic-0.30.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 ABC_R1.fastq ABC_R2.fastq ABC_pair_R1.fastq ABC_unpair_R1.fastq ABC_pair_R2.fastq ABC_unpair_R2.fastq ILLUMINACLIP:illumina_truseq_adapter.fasta:2:40:15 LEADING:20 TRAILING:20 SLIDINGWINDOW:20:25 MINLEN:100
+# use trimmomatic to filter raw data using SLIDINGWINDOW:25, LEADING:5, TRAILING:5, MINLENGTH:100
+
+files=ls *R1*gz | cut -d'_' -f1-3
+
+for f in $files 
+do
+
+echo "Processing $f"
+
+java -jar /usit/abel/u1/mortema/software/Trimmomatic-0.36 PE -trimlog $files.trimmomatic.log \
+$files_R1_001.fastq.gz $files_R2_001.fastq.gz \
+$files_R1_001_pass.fastq $files_R1_001_fail.fastq $files_R2_001_pass.fastq $files_R2_001_fail.fastq \
+ILLUMINACLIP:/usit/abel/u1/mortema/software/Trimmomatic-0.36/adapters/TruSeq3-PE.fa:2:30:10 \
+LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+gzip $files_R1_001_pass.fastq
+gzip $files_R2_001_pass.fastq
+
+done
+
+
+
 # use SOAPec and Corrector_HA to perform error correction using k determined by KmerFreq_HA. 
 # use fastuniq to remove highly duplicated reads. 
 # use SOAPdenovo2 to assemble contigs
