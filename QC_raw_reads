@@ -1,4 +1,5 @@
 # use trimmomatic to filter raw data using SLIDINGWINDOW:25, LEADING:20, TRAILING:20, MINLENGTH:100
+java -classpath trimmomatic-0.30.jar org.usadellab.trimmomatic.TrimmomaticPE -phred33 ABC_R1.fastq ABC_R2.fastq ABC_pair_R1.fastq ABC_unpair_R1.fastq ABC_pair_R2.fastq ABC_unpair_R2.fastq ILLUMINACLIP:illumina_truseq_adapter.fasta:2:40:15 LEADING:20 TRAILING:20 SLIDINGWINDOW:20:25 MINLEN:100
 # use SOAPec and Corrector_HA to perform error correction using k determined by KmerFreq_HA. 
 # use fastuniq to remove highly duplicated reads. 
 # use SOAPdenovo2 to assemble contigs
