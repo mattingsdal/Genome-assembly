@@ -1,0 +1,9 @@
+# use trimmomatic to filter raw data using SLIDINGWINDOW:25, LEADING:20, TRAILING:20, MINLENGTH:100
+# use SOAPec and Corrector_HA to perform error correction using k determined by KmerFreq_HA. 
+# use fastuniq to remove highly duplicated reads. 
+# use SOAPdenovo2 to assemble contigs
+# remove contigs < 1kbp
+# use BUSCO to asses assembly
+
+
+
