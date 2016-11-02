@@ -7,3 +7,11 @@
 -java="/usr/bin/java" \
 -pacbio-raw yeast.20x.fastq.gz \
 -gridOptions='--account=cees --time=24:00:00'
+
+# testing on 1 fastq file, actual data
+~/software/canu/Linux-amd64/bin/canu -p corkwing\
+-d /usit/abel/u1/mortema/pacbio \
+genomeSize=600000000 \
+-pacbio-raw *fastq.gz \
+gnuplot=/usit/abel/u1/mortema/bin/bin/gnuplot \
+-gridOptions='--account=cees --time=24:00:00'
