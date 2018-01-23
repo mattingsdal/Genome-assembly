@@ -1,1 +1,2 @@
-~/software/jellyfish-2.2.6/bin/jellyfish count -t 10 -m 21 -C -s 5G -o 21mer_out HG5KLBCXY_Smelops_GATCAG_L002_R1_001.fastq HG5KLBCXY_Smelops_GATCAG_L002_R2_001.fastq
+~/software/jellyfish-2.2.6/bin/jellyfish count -t 10 -m 21 -C -s 5G -o 21mer_out *fastq
+~/software/jellyfish-2.2.6/bin/jellyfish histo -t 10 21mer_out > reads21.histo
