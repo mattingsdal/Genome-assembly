@@ -1,0 +1,1 @@
+~/software/jellyfish-2.2.6/bin/jellyfish count -t 10 -m 21 -C -s 5G -o 21mer_out HG5KLBCXY_Smelops_GATCAG_L002_R1_001.fastq HG5KLBCXY_Smelops_GATCAG_L002_R2_001.fastq
